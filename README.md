@@ -1,4 +1,4 @@
-# earthquakes-widget
+# earthquake-widget
 An iOS widget made with Scriptable that shows the latest and most important seismic event in Italy.
 
 ## Requirements
