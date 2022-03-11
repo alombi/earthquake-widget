@@ -1,5 +1,5 @@
 const key = 'KEY_HERE';
-  
+ 
 // defining colors
 const colors = {"red":"#FF3B30", "orange":"#FD8208", "yellow":"#FEC309"}  
 
@@ -98,7 +98,13 @@ async function createWidget(event, img){
 }
 
 async function retrieveImage(lat, long, color){
-  let url = 'https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/pin-s+' + color.split('#')[1] + '(' + long + ',' + lat + ')/' + long + ',' + lat + ',5.6,0/400x300@2x?access_token=' + key;
+  let map;
+  if(Device.isUsingDarkAppearance()){
+    map = 'dark-v10'
+  }else{
+    map = 'streets-v11'
+  }
+  let url = `https://api.mapbox.com/styles/v1/mapbox/${map}/static/pin-s+${color.split('#')[1]}(${long},${lat})/${long},${lat},5.6,0/400x300@2x?access_token=${key}`;
   var request = await new Request(url)
   var response = await request.loadImage()
   return response
