@@ -103,7 +103,7 @@ async function retrieveImage(lat, long, color){
   }else{
     map = 'streets-v11'
   }
-  let url = `https://api.mapbox.com/styles/v1/mapbox/${map}/static/pin-s+${color.split('#')[1]}(${long},${lat})/${long},${lat},5.6,0/400x300@2x?access_token=${key}&attribution=false`;
+  let url = `https://api.mapbox.com/styles/v1/mapbox/${map}/static/pin-s+${color.split('#')[1]}(${long},${lat})/${long},${lat},5.6,0/400x300@2x?access_token=${key}&attribution=false&logo=false`;
   var request = await new Request(url)
   var response = await request.loadImage()
   return response
