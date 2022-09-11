@@ -1,4 +1,4 @@
-This project is an iOS widget that shows the last notable seismic event in Italy, also with a beautiful map and lots of useful details.
+This project is an iOS widget that shows the last notable seismic event in Italy, also with a beautiful map and other details.
 
 ## Requirements
 1. You'll need a device running iOS or iPadOS 14 or newer
